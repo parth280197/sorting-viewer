@@ -1,0 +1,10 @@
+.ArrayContainer {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  margin: auto;
+  justify-content: space-evenly;
+  border: 1.5px solid green;
+  border-radius: 5px;
+  padding: 5px;
+}

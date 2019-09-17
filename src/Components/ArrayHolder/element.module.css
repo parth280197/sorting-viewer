@@ -1,0 +1,6 @@
+.Element {
+  display: flex;
+  border: 2px solid rgb(248, 149, 18);
+  border-radius: 5px;
+  padding: 20px;
+}
