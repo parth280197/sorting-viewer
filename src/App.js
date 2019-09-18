@@ -1,9 +1,10 @@
 import React from "react";
 import ArrayHolder from "../src/Components/ArrayHolder/arrayHolder";
+import SortingSteps from "../src/Containers/SortingSteps/SortingSteps";
 import "./App.css";
 
 function App() {
-  return <ArrayHolder elements={[1, 2, 3, 4, 5]} />;
+  return <SortingSteps />;
 }
 
 export default App;
