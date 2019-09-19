@@ -47,11 +47,16 @@ class SortingSteps extends Component {
   unSoted = [5, 2, 1, 7, 5, 3, 2];
 
   swap = (array, index1, index2) => {
-    arrayHolder = [...arrayHolder, [...array]];
-    let temp = array[index1];
-    array[index1] = array[index2];
-    array[index2] = temp;
-    this.setState({sortingSteps: arrayHolder});
+    //arrayHolder = [...arrayHolder, [...array]];
+    this.setState(currentState => {
+      let temp = array[index1];
+      array[index1] = array[index2];
+      array[index2] = temp;
+      return {
+        sortingSteps: [...currentState.sortingSteps, {arrayHolder: [...array]}]
+      };
+    });
+    //sortingSteps: [...sortingSteps, {currentArray: [...array]}]
   };
 
   render() {
@@ -62,9 +67,9 @@ class SortingSteps extends Component {
         >
           Sort
         </div>
-        {this.state.sortingSteps.map(elements => {
+        {/* {this.state.sortingSteps.map(elements => {
           return <ArrayHolder elements={elements} />;
-        })}
+        })} */}
       </>
     );
   }
